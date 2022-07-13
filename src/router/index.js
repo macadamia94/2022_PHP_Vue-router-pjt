@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import introduceView from "../views/introduceView.vue";
+import DataBindingList from "../views/DataBindingList.vue";
+import Rendering from "../views/Rendering.vue";
 
 const routes = [
   {
@@ -14,12 +16,22 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+    component: () => import(/* webpackChunkName: "about" */ "../views/AboutView.vue"), // lazy-load 적용
   },
   {
     path: "/intro",
     name: "intro",
     component: introduceView,
+  },
+  {
+    path: "/databindinglist",
+    name: "databindinglist",
+    component: DataBindingList,
+  },
+  {
+    path: "/rendering",
+    name: "rendering",
+    component: Rendering,
   },
 ];
 
