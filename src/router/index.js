@@ -3,6 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import introduceView from "../views/introduceView.vue";
 import DataBindingList from "../views/DataBindingList.vue";
 import Rendering from "../views/Rendering.vue";
+import EventClick from "../views/EventClick";
 
 const routes = [
   {
@@ -32,6 +33,11 @@ const routes = [
     path: "/rendering",
     name: "rendering",
     component: Rendering,
+  },
+  {
+    path: "/eventclick",
+    name: "eventclick",
+    component: EventClick,
   },
 ];
 
